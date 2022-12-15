@@ -38,6 +38,7 @@ describe('filter', () => {
 
     it('should throw an error if the input is not an array', () => {
         // Test that the function throws an error if the input is not an array
+        expect(() => filter(null, () => true)).toThrow();
         expect(() => filter('hello', () => true)).toThrow();
         expect(() => filter(123, () => true)).toThrow();
         expect(() => filter(true, () => true)).toThrow();

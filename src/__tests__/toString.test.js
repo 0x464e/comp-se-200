@@ -5,6 +5,7 @@ describe('toString()', () => {
         expect(toString(-0)).toBe('-0');
         expect(toString([1, 2, 3])).toBe('1,2,3');
         expect(toString([])).toBe('');
+        expect(toString([1,null,3])).toBe('1,,3');
         expect(toString(null)).toBe('');
     });
 

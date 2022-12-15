@@ -10,8 +10,8 @@ describe('defaultTo', () => {
 
     it('should return the default value if the value is NaN, null, or undefined', () => {
         // Test that the function returns the default value if the value is NaN, null, or undefined
-        expect(defaultTo(NaN, 10)).toBe(10);
         expect(defaultTo(null, 'world')).toBe('world');
         expect(defaultTo(undefined, [4, 5, 6])).toEqual([4, 5, 6]);
+        expect(defaultTo(NaN, 10)).toBe(10);
     });
 });
