@@ -8,6 +8,10 @@
   "jest": {
     "modulePaths": [
       "./src"
+    ],
+    "collectCoverageFrom": [
+      "src/*.js",
+      "!**/.internal/**"
     ]
   },
   "author": "",
