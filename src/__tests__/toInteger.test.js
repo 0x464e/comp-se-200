@@ -62,8 +62,8 @@ describe('toInteger', () => {
         expect(() => toInteger(Object("cat"))).toThrow(TypeError);
     });
 
-    it('koira', () => {
-        expect(() => toInteger({valueOf: () => 1})).toThrow(TypeError);
+    it('Should return the correct value for custom valueOf property functions', () => {
+        expect(toInteger({valueOf: () => 73})).toBe(73)
     });
 
     it('should handle bigints', () => {
