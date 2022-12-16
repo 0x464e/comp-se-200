@@ -17,20 +17,11 @@ describe('divide', () => {
     });
 
     it('should handle division by zero correctly', () => {
-        // Test that the function can handle division by zero
-
-        // it seems that the divide function returns NaN when dividing by zero
-        // we might have expected the function return infinity, as javascript does
-        expect(divide(6, 0)).toBe(NaN);
-        expect(divide(6, -0)).toBe(NaN);
-        expect(divide(-6, 0)).toBe(NaN);
-        expect(divide(-6, -0)).toBe(NaN);
+        expect(divide(6, 0)).toBe(Number.POSITIVE_INFINITY);
+        expect(divide(6, -0)).toBe(Number.NEGATIVE_INFINITY);
+        expect(divide(-6, 0)).toBe(Number.NEGATIVE_INFINITY);
+        expect(divide(-6, -0)).toBe(Number.POSITIVE_INFINITY);
         expect(divide(0, 0)).toBe(NaN);
-
-        // normally javascript returns infinity when dividing by zero
-        // as it wasn't documented which should happen, we'll comment out the tests expecting infinity
-        // expect(divide(6, 0)).toBe(Number.POSITIVE_INFINITY);
-        // expect(divide(-6, 0)).toBe(Number.NEGATIVE_INFINITY);
     });
 
     it('should handle NaN correctly', () => {
@@ -38,6 +29,12 @@ describe('divide', () => {
         expect(divide(1, NaN)).toBe(NaN);
         expect(divide(NaN, NaN)).toBe(NaN);
         expect(divide(NaN, 1)).toBe(NaN);
+    });
+
+    it('should throw an error for objects', () => {
+        expect(() => divide({}, {})).toThrow();
+        expect(() => divide({}, 1)).toThrow();
+        expect(() => divide(1, {})).toThrow();
     });
 
     it('should handle infinity correctly', () => {
