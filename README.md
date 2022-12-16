@@ -17,7 +17,12 @@ We are using Jest test folder structure so our tests can be found under `__tests
 # Installation guide
 To reproduce and run tests on your own local machine, here is a list to follow:
 
-1. Clone this repository
+First you should install [Node.JS](https://nodejs.org/en/).
+We are ensuring with our testing pipeline that these tests work with versions 14, 16 and 18.
+
+Then follow these steps:
+
+1. Clone/download this repository
 2. run `npm install`
 
 Run only tests
@@ -26,6 +31,8 @@ Run only tests
 Run tests with coverage report
 `npm test-cov`
 
+The coverage report will be found from the `/coverage` folder.  
+If you open the `coverage/index.html` you will find a collection from all the tests and their coverages.
 # Technologies
 Tests are created with [Jest framework](https://jestjs.io/). Here is the [documentation](https://jestjs.io/docs/getting-started) for this framework.
 
