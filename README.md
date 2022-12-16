@@ -11,6 +11,8 @@ Here is a list of the functions we chose for testing:
 - map.js
 - toInteger.js
 - toString.js
+# Contents of this repository
+We are using Jest test folder structure so our tests can be found under `__tests__` folder with names of `function.test.js`.
 
 # Installation guide
 To reproduce and run tests on your own local machine, here is a list to follow:
