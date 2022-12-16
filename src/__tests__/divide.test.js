@@ -2,12 +2,18 @@ import divide from '../divide';
 
 
 describe('divide', () => {
-    it('should return the quotient of two numbers', () => {
-        // Test that the function returns the quotient of two numbers
-        expect(divide(6, 4)).toBe(1.5);
-        expect(divide(6, -4)).toBe(-1.5);
-        expect(divide(-6, 4)).toBe(-1.5);
-        expect(divide(-6, -4)).toBe(1.5);
+    it('should divide two numbers that go evenly into each other', () => {
+        expect(divide(6, 3)).toBe(2);
+        expect(divide(10, 2)).toBe(5);
+        expect(divide(100, 10)).toBe(10);
+    });
+
+
+    it('should return the fractional quotients correctly', () => {
+        expect(divide(6, 4)).toBeCloseTo(1.5);
+        expect(divide(10, -3)).toBeCloseTo(-3.333333333333333);
+        expect(divide(-7, 2)).toBeCloseTo(-3.5);
+        expect(divide(-6, -4)).toBeCloseTo(1.5);
     });
 
     it('should handle division by zero correctly', () => {
