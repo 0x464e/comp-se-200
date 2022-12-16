@@ -1,0 +1,65 @@
+﻿name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the bug by filling in all (applicable) fields in this form.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Detailed explanation of the bug, what exactly happened?
+      placeholder: Describe the bug here!
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Tell us exactly what steps need to be taken to reproduce the bug.
+      placeholder: Be sure to be very detailed!
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: User Inputs
+      description: What user inputs are needed to reproduce the bug? (if any)
+      placeholder: ex. double click button x, then press enter..
+  - type: textarea
+    id: results
+    attributes:
+      label: Expected/Real results
+      description: What is expected to happen and what actually happened?
+      placeholder: ex. two carrots should've been added to the shopping cart, but instead only one for added
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: What's the severity of the bug? Think in terms of how it affects the end user.
+      options:
+        - Critical
+        - Major
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Application version
+      description: What application version are you testing on?
+      placeholder: ex. 0.5.3-BETA
+    validations:
+      required: true
+  - type: textarea
+    id: more
+    attributes:
+      label: More relevant information
+      description: Please fill in any other relevant information, or applications error logs if applicable
