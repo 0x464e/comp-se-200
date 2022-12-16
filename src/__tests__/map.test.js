@@ -20,9 +20,12 @@ describe('map', () => {
         expect(map([], () => {})).toEqual([]);
     });
 
-    it('should return an empty array if the input array is null or undefined', () => {
-        expect(map(null, () => {})).toEqual([]);
-        expect(map(undefined, () => {})).toEqual([]);
+    it('should throw an error if the input type is not an array', () => {
+        expect(() => map('abc', () => {})).toThrow();
+        expect(() => map(123, () => {})).toThrow();
+        expect(() => map({}, () => {})).toThrow();
+        expect(() => map(null, () => {})).toThrow();
+        expect(() => map(undefined, () => {})).toThrow();
     });
 
     it('should throw an error if the iteratee is not a function', () => {
