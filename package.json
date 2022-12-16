@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Software Testing Project",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-cov": "jest --coverage"
   },
   "jest": {
     "modulePaths": [
