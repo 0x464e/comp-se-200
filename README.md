@@ -33,6 +33,12 @@ Run tests with coverage report
 
 The coverage report will be found from the `/coverage` folder.  
 If you open the `coverage/index.html` you will find a collection from all the tests and their coverages.
+
+<b>Alternatively</b>  
+You can use the provided Dockerfile to run the tests in a Docker container with  
+`docker build -t container-name .`
+
+
 # Technologies
 Tests are created with [Jest framework](https://jestjs.io/). Here is the [documentation](https://jestjs.io/docs/getting-started) for this framework.
 
